@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/warning_sheet_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:padding="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="center_horizontal" android:id="@+id/handleBar" android:background="@drawable/bottom_sheet_handle" android:layout_width="40dp" android:layout_height="4dp" android:layout_marginBottom="24dp"/>
+        <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="72dp" android:layout_height="72dp" android:layout_marginTop="16dp">
+            <View android:id="@+id/warningIconBackground" android:background="@drawable/warning_icon_background" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/warningIcon" android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_warning" app:tint="@color/warning_sheet_background"/>
+        </FrameLayout>
+        <TextView android:textSize="26sp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@+id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Early Preview Alpha" android:fontFamily="@font/space_grotesk_regular"/>
+        <TextView android:textSize="15sp" android:textColor="@color/warning_text_secondary" android:gravity="center" android:id="@+id/descriptionText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Your server will run on an early development version of PumpkinMC (PumpkinMC.org). This build is for preview and testing purposes only." android:lineSpacingExtra="4dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/noMobAiCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:cardBackgroundColor="@color/warning_card_background" app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeWidth="0dp">
+            <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_robot" android:layout_marginEnd="12dp" app:tint="@color/warning_accent"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/warning_accent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LIMITED MOB AI"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/warning_card_text_dim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Most creatures in the world are currently static and will not interact or move."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/incompleteGameplayCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardBackgroundColor="@color/warning_card_background" app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeWidth="0dp">
+            <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_block" android:layout_marginEnd="12dp" app:tint="@color/warning_critical"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/warning_critical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="INCOMPLETE GAMEPLAY"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/warning_card_text_dim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="The game cannot be finished from start to end. Major Minecraft features are still missing."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <CheckBox android:textSize="15sp" android:textColor="@color/white" android:id="@+id/understandCheckbox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="I understand this is an alpha preview" android:paddingStart="8dp" android:buttonTint="@color/warning_accent"/>
+        <com.google.android.material.button.MaterialButton android:enabled="false" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/warning_sheet_background" android:id="@+id/understandButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="16dp" android:text="I Understand" app:backgroundTint="@color/warning_accent" app:cornerRadius="12dp" app:icon="@drawable/ic_arrow_forward" app:iconGravity="4" app:iconTint="@color/warning_sheet_background"/>
+        <TextView android:textSize="12sp" android:textColor="@color/warning_accent" android:layout_gravity="center_horizontal" android:id="@+id/buildVersionText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="8dp" android:text="BUILD: 0.4.1-ALPHA" android:letterSpacing="0.1"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

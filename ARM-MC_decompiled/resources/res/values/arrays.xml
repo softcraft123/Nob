@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="difficulty_options">
+        <item>Peaceful</item>
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+    </array>
+    <array name="gamemode_options">
+        <item>Survival</item>
+        <item>Creative</item>
+        <item>Adventure</item>
+        <item>Spectator</item>
+    </array>
+</resources>

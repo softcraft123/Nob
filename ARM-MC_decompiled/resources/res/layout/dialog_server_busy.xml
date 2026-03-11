@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/warning_sheet_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:padding="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="center_horizontal" android:id="@+id/handleBar" android:background="@drawable/bottom_sheet_handle" android:layout_width="40dp" android:layout_height="4dp" android:layout_marginBottom="24dp"/>
+        <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="72dp" android:layout_height="72dp" android:layout_marginTop="16dp">
+            <View android:id="@+id/iconBackground" android:background="@drawable/busy_icon_background" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/busyIcon" android:layout_width="46dp" android:layout_height="46dp" android:src="@drawable/sad_emoji" app:tint="@color/warning_sheet_background"/>
+        </FrameLayout>
+        <TextView android:textSize="26sp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@+id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/server_busy_title" android:fontFamily="@font/space_grotesk_regular"/>
+        <TextView android:textSize="15sp" android:textColor="@color/warning_text_secondary" android:gravity="center" android:id="@+id/descriptionText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/server_busy_description" android:lineSpacingExtra="4dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/supporterBenefitCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:cardBackgroundColor="@color/gold_tint" app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeColor="@color/gold_dark" app:strokeWidth="1dp">
+            <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_star" android:layout_marginEnd="12dp" app:tint="@color/gold"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/gold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/supporter_priority_title"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/warning_text_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/supporter_priority_description"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.button.MaterialButton android:textSize="16sp" android:textStyle="bold" android:textColor="@color/background_dark" android:id="@+id/upgradeButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="24dp" android:text="@string/upgrade_to_supporter" android:fontFamily="@font/space_grotesk_regular" app:backgroundTint="@color/gold" app:cornerRadius="12dp" app:icon="@drawable/ic_heart" app:iconGravity="2" app:iconSize="20dp" app:iconTint="@color/background_dark"/>
+        <com.google.android.material.button.MaterialButton android:textSize="14sp" android:textColor="@color/warning_text_secondary" android:layout_gravity="center_horizontal" android:id="@+id/dismissButton" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:text="@string/maybe_later" style="@style/Widget.Material3.Button.TextButton"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

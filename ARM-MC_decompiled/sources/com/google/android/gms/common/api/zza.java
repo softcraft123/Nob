@@ -1,0 +1,33 @@
+package com.google.android.gms.common.api;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+/* compiled from: com.google.android.gms:play-services-basement@@18.8.0 */
+final class zza implements Parcelable.Creator {
+    private static final zza zzb = new zza(new zzb());
+    private final Parcelable.Creator zza;
+
+    private zza(Parcelable.Creator creator) {
+        this.zza = creator;
+    }
+
+    public static zza zza() {
+        return zzb;
+    }
+
+    public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
+        int dataPosition = parcel.dataPosition();
+        if (parcel.readInt() == -204102970) {
+            ApiMetadata zza2 = zzb.zza(parcel);
+            ApiMetadata apiMetadata = zza2;
+            return zza2;
+        }
+        parcel.setDataPosition(dataPosition - 4);
+        return ApiMetadata.getEmptyInstance();
+    }
+
+    public final /* bridge */ /* synthetic */ Object[] newArray(int i) {
+        return new ApiMetadata[i];
+    }
+}

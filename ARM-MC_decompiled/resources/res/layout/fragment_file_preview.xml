@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/background_dark" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/card_dark" android:layout_width="match_parent" android:layout_height="56dp" android:paddingHorizontal="8dp">
+        <ImageButton android:id="@+id/backButton" android:background="?attr/selectableItemBackgroundBorderless" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_arrow_back" android:tint="@color/text_color_dark_primary" android:contentDescription="Back"/>
+        <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/text_color_dark_primary" android:ellipsize="middle" android:id="@+id/previewFileName" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1" android:layout_marginStart="4dp"/>
+        <TextView android:textSize="12sp" android:textColor="@color/text_tint" android:id="@+id/previewFileType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8dp"/>
+    </LinearLayout>
+    <View android:background="@color/secondary_tint" android:layout_width="match_parent" android:layout_height="1dp"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/previewProgress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ScrollView android:id="@+id/textScrollView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="13sp" android:textColor="@color/text_color_dark_primary" android:id="@+id/textContent" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:textIsSelectable="true" android:fontFamily="monospace"/>
+        </ScrollView>
+        <ScrollView android:id="@+id/imageScrollView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@+id/imageContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+        </ScrollView>
+        <TextView android:textSize="14sp" android:textColor="@color/text_tint" android:gravity="center" android:id="@+id/previewError" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,58 @@
+package androidx.navigation;
+
+import android.os.Bundle;
+import com.google.firebase.firestore.model.Values;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+@Metadata(d1 = {"\u0000%\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0018\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000*\u0001\u0000\b\n\u0018\u00002\n\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u0001J\u001b\u0010\u0007\u001a\u0004\u0018\u00010\u00022\u0006\u0010\b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u0004H\u0002J\u0010\u0010\u000b\u001a\u00020\u00022\u0006\u0010\f\u001a\u00020\u0004H\u0016J\u001c\u0010\u000b\u001a\u0004\u0018\u00010\u00022\u0006\u0010\f\u001a\u00020\u00042\b\u0010\r\u001a\u0004\u0018\u00010\u0002H\u0016J\"\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u00042\b\u0010\f\u001a\u0004\u0018\u00010\u0002H\u0016R\u0014\u0010\u0003\u001a\u00020\u00048VX\u0004¢\u0006\u0006\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0010"}, d2 = {"androidx/navigation/NavType$Companion$BoolArrayType$1", "Landroidx/navigation/NavType;", "", "name", "", "getName", "()Ljava/lang/String;", "get", "bundle", "Landroid/os/Bundle;", "key", "parseValue", "value", "previousValue", "put", "", "navigation-common_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
+/* compiled from: NavType.kt */
+public final class NavType$Companion$BoolArrayType$1 extends NavType<boolean[]> {
+    NavType$Companion$BoolArrayType$1() {
+        super(true);
+    }
+
+    public String getName() {
+        return "boolean[]";
+    }
+
+    public void put(Bundle bundle, String str, boolean[] zArr) {
+        Intrinsics.checkNotNullParameter(bundle, "bundle");
+        Intrinsics.checkNotNullParameter(str, "key");
+        bundle.putBooleanArray(str, zArr);
+    }
+
+    public boolean[] get(Bundle bundle, String str) {
+        Intrinsics.checkNotNullParameter(bundle, "bundle");
+        Intrinsics.checkNotNullParameter(str, "key");
+        return (boolean[]) bundle.get(str);
+    }
+
+    public boolean[] parseValue(String str) {
+        Intrinsics.checkNotNullParameter(str, Values.VECTOR_MAP_VECTORS_KEY);
+        return new boolean[]{NavType.BoolType.parseValue(str).booleanValue()};
+    }
+
+    /* JADX WARNING: Code restructure failed: missing block: B:2:0x0007, code lost:
+        r3 = kotlin.collections.ArraysKt.plus(r3, parseValue(r2));
+     */
+    /* Code decompiled incorrectly, please refer to instructions dump. */
+    public boolean[] parseValue(java.lang.String r2, boolean[] r3) {
+        /*
+            r1 = this;
+            java.lang.String r0 = "value"
+            kotlin.jvm.internal.Intrinsics.checkNotNullParameter(r2, r0)
+            if (r3 == 0) goto L_0x0013
+            boolean[] r0 = r1.parseValue((java.lang.String) r2)
+            boolean[] r3 = kotlin.collections.ArraysKt.plus((boolean[]) r3, (boolean[]) r0)
+            if (r3 != 0) goto L_0x0012
+            goto L_0x0013
+        L_0x0012:
+            return r3
+        L_0x0013:
+            boolean[] r2 = r1.parseValue((java.lang.String) r2)
+            return r2
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.navigation.NavType$Companion$BoolArrayType$1.parseValue(java.lang.String, boolean[]):boolean[]");
+    }
+}

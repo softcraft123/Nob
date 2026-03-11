@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/warning_sheet_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:paddingTop="16dp" android:paddingBottom="32dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+        <View android:layout_gravity="center_horizontal" android:background="@drawable/bottom_sheet_handle" android:layout_width="40dp" android:layout_height="4dp" android:layout_marginBottom="20dp"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+            <FrameLayout android:layout_width="44dp" android:layout_height="44dp">
+                <View android:background="@drawable/setup_icon_background_green" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <ImageView android:layout_gravity="center" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_globe" app:tint="@color/warning_sheet_background"/>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp">
+                <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tunnel Region" android:fontFamily="@font/space_grotesk_regular"/>
+                <TextView android:textSize="13sp" android:textColor="#80ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Where to tunnel your server traffic from"/>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/regionLocalCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="5dp" app:cardBackgroundColor="@color/warning_card_background" app:cardCornerRadius="14dp" app:cardElevation="0dp" app:strokeColor="#2a4a2a" app:strokeWidth="2dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="22sp" android:gravity="center" android:layout_width="36dp" android:layout_height="36dp" android:text="��" android:layout_marginEnd="14dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Local (No Tunnel)" android:fontFamily="@font/space_grotesk_regular"/>
+                    <TextView android:textSize="12sp" android:textColor="#80ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Use your device&apos;s local IP address only"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp">
+                    <TextView android:textSize="12sp" android:textColor="#60ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No tunnel" android:fontFamily="@font/space_grotesk_regular" android:layout_marginEnd="8dp"/>
+                    <ImageView android:id="@+id/regionLocalCheck" android:visibility="gone" android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_check_circle" app:tint="@color/primary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/tunnelInfoCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="10dp" app:cardBackgroundColor="#1e2e1e" app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeColor="#2a4a2a" app:strokeWidth="1dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="14dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/tunnelInfoIcon" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_info" android:layout_marginEnd="10dp" app:tint="#4ade80"/>
+                <TextView android:textSize="13sp" android:textColor="#a0ffffff" android:id="@+id/tunnelInfoText" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Tunneling lets players connect to your server using a public address instead of your local IP. Select a region close to you for best performance." android:layout_weight="1" android:lineSpacingExtra="2dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/regionEuropeCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" app:cardBackgroundColor="@color/warning_card_background" app:cardCornerRadius="14dp" app:cardElevation="0dp" app:strokeColor="#2a4a2a" app:strokeWidth="2dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="22sp" android:gravity="center" android:layout_width="36dp" android:layout_height="36dp" android:text="����" android:layout_marginEnd="14dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Europe" android:fontFamily="@font/space_grotesk_regular"/>
+                    <TextView android:textSize="12sp" android:textColor="#80ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Frankfurt, Germany"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp">
+                    <TextView android:textSize="12sp" android:textColor="#80ffffff" android:id="@+id/regionEuropePing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="..." android:fontFamily="@font/space_grotesk_regular" android:layout_marginEnd="8dp"/>
+                    <ImageView android:id="@+id/regionEuropeCheck" android:visibility="gone" android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_check_circle" app:tint="@color/primary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/regionAmericaCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" app:cardBackgroundColor="#1e1e1e" app:cardCornerRadius="14dp" app:cardElevation="0dp" app:strokeColor="#222222" app:strokeWidth="2dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="22sp" android:gravity="center" android:layout_width="36dp" android:layout_height="36dp" android:text="����" android:alpha="0.4" android:layout_marginEnd="14dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="#60ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="America" android:fontFamily="@font/space_grotesk_regular"/>
+                    <TextView android:textSize="12sp" android:textColor="#40ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="United States"/>
+                </LinearLayout>
+                <TextView android:textSize="11sp" android:textStyle="bold" android:textColor="#60ffffff" android:background="@drawable/coming_soon_badge_background" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Soon" android:fontFamily="@font/space_grotesk_regular" android:paddingStart="8dp" android:paddingEnd="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/regionAsiaCard" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="#1e1e1e" app:cardCornerRadius="14dp" app:cardElevation="0dp" app:strokeColor="#222222" app:strokeWidth="2dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="22sp" android:gravity="center" android:layout_width="36dp" android:layout_height="36dp" android:text="��" android:alpha="0.4" android:layout_marginEnd="14dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="#60ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Asia" android:fontFamily="@font/space_grotesk_regular"/>
+                    <TextView android:textSize="12sp" android:textColor="#40ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Singapore"/>
+                </LinearLayout>
+                <TextView android:textSize="11sp" android:textStyle="bold" android:textColor="#60ffffff" android:background="@drawable/coming_soon_badge_background" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Soon" android:fontFamily="@font/space_grotesk_regular" android:paddingStart="8dp" android:paddingEnd="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

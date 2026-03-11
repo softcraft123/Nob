@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="4dp" android:paddingVertical="8dp">
+    <com.google.android.material.card.MaterialCardView android:layout_width="36dp" android:layout_height="36dp" app:cardBackgroundColor="@color/secondary_tint" app:cardCornerRadius="6dp" app:cardElevation="0dp">
+        <ImageView android:padding="6dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_person" android:scaleType="centerInside" app:tint="@color/text_tint"/>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView android:textSize="14sp" android:textColor="@color/white" android:id="@+id/playerName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp"/>
+    <ImageButton android:id="@+id/removeButton" android:background="?attr/selectableItemBackgroundBorderless" android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_close" android:contentDescription="Remove player" app:tint="@color/tertiary_tint"/>
+</LinearLayout>

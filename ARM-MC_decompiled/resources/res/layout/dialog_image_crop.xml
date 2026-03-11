@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/background_dark" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/header" android:background="@color/light_secondary" android:padding="16dp" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Crop Image" android:layout_weight="1"/>
+        <TextView android:textSize="12sp" android:textColor="@color/tertiary_tint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Drag to move • Corners to resize"/>
+    </LinearLayout>
+    <com.armmc.app.ui.servers.CropImageView android:id="@+id/cropView" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="matrix" app:layout_constraintBottom_toTopOf="@+id/buttonContainer" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/header"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/buttonContainer" android:background="@color/light_secondary" android:padding="16dp" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <Button android:textColor="@color/white" android:id="@+id/cancelButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Cancel" android:layout_weight="1" android:layout_marginEnd="8dp" app:strokeColor="@color/stroke_primary" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        <Button android:textColor="@color/white" android:id="@+id/confirmButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Apply" android:layout_weight="1" android:layout_marginStart="8dp" android:backgroundTint="@color/primary_accent"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

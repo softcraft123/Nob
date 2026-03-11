@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/background_dark" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:paddingTop="16dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp">
+        <EditText android:textSize="14sp" android:textColor="@color/text_color_dark_primary" android:textColorHint="@color/text_tint" android:id="@+id/searchField" android:background="@drawable/input_background_dark" android:layout_width="match_parent" android:layout_height="48dp" android:hint="Search files..." android:maxLines="1" android:drawablePadding="10dp" android:inputType="text" android:imeOptions="actionSearch" android:drawableStart="@drawable/ic_search" android:drawableTint="@color/text_tint" android:paddingHorizontal="14dp"/>
+    </FrameLayout>
+    <HorizontalScrollView android:id="@+id/breadcrumbScroll" android:paddingBottom="8dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:fadeScrollbars="true" android:paddingHorizontal="16dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/breadcrumbContainer" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </HorizontalScrollView>
+    <View android:background="@color/secondary_tint" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginBottom="4dp"/>
+    <TextView android:textSize="14sp" android:textColor="@color/text_tint" android:gravity="center" android:id="@+id/emptyText" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:text="No files found" android:layout_weight="1"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/fileRecyclerView" android:paddingBottom="80dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>

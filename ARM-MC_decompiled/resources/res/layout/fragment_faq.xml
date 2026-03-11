@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/dark_primary" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:background="@color/background_dark" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_faq_search" android:layout_width="match_parent" android:layout_height="48dp" android:paddingStart="14dp" android:paddingEnd="14dp">
+            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_search" android:contentDescription="Search" app:tint="@color/primary_accent"/>
+            <EditText android:textSize="14sp" android:textColor="@color/white" android:textColorHint="@color/text_tint" android:id="@+id/searchInput" android:background="@null" android:layout_width="0dp" android:layout_height="match_parent" android:hint="Search for topics..." android:singleLine="true" android:layout_weight="1" android:inputType="text" android:imeOptions="actionSearch" android:fontFamily="@font/space_grotesk_regular" android:paddingStart="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/faqRecyclerView" android:paddingTop="8dp" android:paddingBottom="16dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+</LinearLayout>

@@ -1,0 +1,17 @@
+package com.google.android.gms.internal.p002firebaseauthapi;
+
+/* renamed from: com.google.android.gms.internal.firebase-auth-api.zzpv  reason: invalid package */
+/* compiled from: com.google.firebase:firebase-auth@@24.0.1 */
+public final /* synthetic */ class zzpv implements zzqc {
+    private /* synthetic */ zzpw zza;
+    private /* synthetic */ zzpz zzb;
+
+    public /* synthetic */ zzpv(zzpw zzpw, zzpz zzpz) {
+        this.zza = zzpw;
+        this.zzb = zzpz;
+    }
+
+    public final Object zza(zzoa zzoa) {
+        return this.zza.zza(zzoa.zzb(), this.zzb.zza());
+    }
+}

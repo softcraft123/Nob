@@ -1,0 +1,15 @@
+package com.google.android.gms.internal.fido;
+
+/* compiled from: com.google.android.gms:play-services-fido@@21.0.0 */
+final class zzdi extends zzdj {
+    zzdi() {
+    }
+
+    public final String zza() {
+        return "<unknown class>";
+    }
+
+    public final String zzb() {
+        return "<unknown method>";
+    }
+}

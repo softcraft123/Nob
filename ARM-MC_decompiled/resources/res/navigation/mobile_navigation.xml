@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/mobile_navigation" app:startDestination="@+id/nav_onboarding">
+    <fragment android:label="Welcome" android:name="com.armmc.app.ui.onboarding.OnboardingFragment" android:id="@+id/nav_onboarding">
+        <action android:id="@+id/action_onboarding_to_servers" app:destination="@+id/nav_servers" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popUpTo="@+id/nav_onboarding" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_onboarding_to_signUp" app:destination="@+id/nav_sign_up" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+        <action android:id="@+id/action_onboarding_to_login" app:destination="@+id/nav_login" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:label="Sign Up" android:name="com.armmc.app.ui.onboarding.SignUpFragment" android:id="@+id/nav_sign_up">
+        <action android:id="@+id/action_signUp_to_servers" app:destination="@+id/nav_servers" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popUpTo="@+id/nav_onboarding" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_signUp_to_login" app:destination="@+id/nav_login" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:label="Login" android:name="com.armmc.app.ui.onboarding.LoginFragment" android:id="@+id/nav_login">
+        <action android:id="@+id/action_login_to_servers" app:destination="@+id/nav_servers" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popUpTo="@+id/nav_onboarding" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_login_to_signUp" app:destination="@+id/nav_sign_up" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:label="@string/menu_servers" android:name="com.armmc.app.ui.servers.ServersFragment" android:id="@+id/nav_servers">
+        <action android:id="@+id/action_servers_to_create_server" app:destination="@+id/nav_create_server" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+        <action android:id="@+id/action_servers_to_subscription" app:destination="@+id/nav_subscription" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:label="New Server" android:name="com.armmc.app.ui.servers.CreateServerFragment" android:id="@+id/nav_create_server">
+        <argument android:name="serverId" android:defaultValue="-1" app:argType="integer"/>
+    </fragment>
+    <fragment android:label="@string/menu_logs" android:name="com.armmc.app.ui.logs.LogsFragment" android:id="@+id/nav_logs"/>
+    <fragment android:label="@string/menu_files" android:name="com.armmc.app.ui.files.FilesFragment" android:id="@+id/nav_files">
+        <action android:id="@+id/action_files_to_preview" app:destination="@+id/nav_file_preview" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:label="File Preview" android:name="com.armmc.app.ui.files.FilePreviewFragment" android:id="@+id/nav_file_preview">
+        <argument android:name="filePath" app:argType="string"/>
+    </fragment>
+    <fragment android:label="@string/menu_profile" android:name="com.armmc.app.ui.profile.ProfileFragment" android:id="@+id/nav_profile">
+        <action android:id="@+id/action_profile_to_subscription" app:destination="@+id/nav_subscription" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+        <action android:id="@+id/action_profile_to_claim_subdomain" app:destination="@+id/nav_claim_subdomain" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+        <action android:id="@+id/action_profile_to_faq" app:destination="@+id/nav_faq" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:label="Premium" android:name="com.armmc.app.ui.profile.SubscriptionFragment" android:id="@+id/nav_subscription"/>
+    <fragment android:label="Claim Subdomain" android:name="com.armmc.app.ui.profile.ClaimSubdomainFragment" android:id="@+id/nav_claim_subdomain"/>
+    <fragment android:label="FAQ" android:name="com.armmc.app.ui.profile.FaqFragment" android:id="@+id/nav_faq"/>
+</navigation>
