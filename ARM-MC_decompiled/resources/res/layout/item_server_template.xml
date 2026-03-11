@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="300dp" android:layout_marginBottom="16dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:strokeColor="@color/card_light" app:strokeWidth="1dp">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/templateImage" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:contentDescription="Template background"/>
+        <View android:background="@drawable/bg_template_card_overlay" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/templateName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:fontFamily="@font/space_grotesk_regular"/>
+            <TextView android:textSize="13sp" android:textColor="#ccffffff" android:id="@+id/templateDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:fontFamily="@font/space_grotesk_regular"/>
+            <Button android:textSize="14sp" android:textStyle="bold" android:textColor="@color/primary_accent" android:id="@+id/selectTemplateButton" android:layout_width="match_parent" android:layout_height="65dp" android:text="Select Template" android:textAllCaps="false" android:fontFamily="@font/space_grotesk_regular" android:backgroundTint="@color/card_light" app:cornerRadius="16dp" app:strokeColor="@color/secondary_tint" app:strokeWidth="1dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </LinearLayout>
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>

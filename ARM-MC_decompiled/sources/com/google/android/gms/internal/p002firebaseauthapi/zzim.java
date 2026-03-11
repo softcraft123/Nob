@@ -1,0 +1,9 @@
+package com.google.android.gms.internal.p002firebaseauthapi;
+
+/* renamed from: com.google.android.gms.internal.firebase-auth-api.zzim  reason: invalid package */
+/* compiled from: com.google.firebase:firebase-auth@@24.0.1 */
+public final /* synthetic */ class zzim implements zzpj {
+    public final zzqf zza(zzcb zzcb) {
+        return zzqe.zzb((zzxb) ((zzalf) zzxb.zza().zza("type.googleapis.com/google.crypto.tink.XChaCha20Poly1305Key").zza(zzyr.zzc().zzj()).zza(zzij.zza(((zzge) zzcb).zzb())).zze()));
+    }
+}

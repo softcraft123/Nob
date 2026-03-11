@@ -1,0 +1,8 @@
+package com.google.android.gms.internal.fido;
+
+/* compiled from: com.google.android.gms:play-services-fido@@21.0.0 */
+final class zzdg extends zzdk {
+    zzdg(String str, Class cls, boolean z) {
+        super("tags", cls, false);
+    }
+}

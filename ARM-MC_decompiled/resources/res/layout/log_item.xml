@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="top" android:orientation="horizontal" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+    <ImageView android:id="@+id/logIcon" android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_dialog_info" android:layout_marginEnd="8dp" app:tint="#64b5f6"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp">
+            <TextView android:textSize="12sp" android:textColor="#6b7280" android:id="@+id/logTimestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10:23:41" android:fontFamily="@font/noto_sans_bold"/>
+            <TextView android:textSize="12sp" android:textColor="#6b7280" android:id="@+id/logLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="INFO" android:fontFamily="@font/noto_sans_bold" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <TextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/logMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Starting minecraft server version 1.20.1" android:fontFamily="@font/noto_sans_bold"/>
+    </LinearLayout>
+</LinearLayout>

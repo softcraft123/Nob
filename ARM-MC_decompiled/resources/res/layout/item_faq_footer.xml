@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_faq_help_card" android:padding="28dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:background="@drawable/bg_discord_icon_circle" android:layout_width="56dp" android:layout_height="56dp">
+        <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_discord" android:contentDescription="Discord" app:tint="@color/dark_primary"/>
+    </FrameLayout>
+    <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Still need help?" android:fontFamily="@font/space_grotesk_regular"/>
+    <TextView android:textSize="13sp" android:textColor="@color/text_tint" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Join our community on Discord for\10support from our team and community." android:lineSpacingMultiplier="1.4"/>
+    <com.google.android.material.button.MaterialButton android:textSize="15sp" android:textStyle="bold" android:textColor="@color/dark_primary" android:id="@+id/discordButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="20dp" android:text="Join our Discord" android:fontFamily="@font/space_grotesk_regular" app:backgroundTint="@color/primary_accent" app:cornerRadius="10dp" app:icon="@drawable/ic_discord" app:iconGravity="2" app:iconTint="@color/dark_primary"/>
+</LinearLayout>

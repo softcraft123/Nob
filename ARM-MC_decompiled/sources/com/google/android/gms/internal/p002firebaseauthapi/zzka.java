@@ -1,0 +1,9 @@
+package com.google.android.gms.internal.p002firebaseauthapi;
+
+/* renamed from: com.google.android.gms.internal.firebase-auth-api.zzka  reason: invalid package */
+/* compiled from: com.google.firebase:firebase-auth@@24.0.1 */
+public final /* synthetic */ class zzka implements zzpu {
+    public final Object zza(zzbi zzbi) {
+        return zzzb.zza((zzke) zzbi);
+    }
+}

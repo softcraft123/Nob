@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/warning_sheet_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:background="@color/warning_sheet_background" android:padding="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="center_horizontal" android:id="@+id/handleBar" android:background="@drawable/bottom_sheet_handle" android:layout_width="40dp" android:layout_height="4dp" android:layout_marginBottom="24dp"/>
+        <ViewFlipper android:id="@+id/setupFlipper" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="72dp" android:layout_height="72dp" android:layout_marginTop="8dp">
+                    <View android:background="@drawable/setup_icon_background_green" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <TextView android:textSize="32sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="��"/>
+                </FrameLayout>
+                <TextView android:textSize="26sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Your First Server!" android:fontFamily="@font/space_grotesk_regular"/>
+                <TextView android:textSize="15sp" android:textColor="@color/warning_text_secondary" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="You have setup your first Minecraft server! Before we begin, we need a couple of permissions to make sure everything runs smoothly." android:lineSpacingExtra="4dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:cardBackgroundColor="@color/warning_card_background" app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeWidth="0dp">
+                    <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_notifications" android:layout_marginEnd="12dp" app:tint="@color/setup_blue"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                            <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/setup_blue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NOTIFICATIONS"/>
+                            <TextView android:textSize="13sp" android:textColor="@color/warning_card_text_dim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Show that your server is running in the background."/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardBackgroundColor="@color/warning_card_background" app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeWidth="0dp">
+                    <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_battery_alert" android:layout_marginEnd="12dp" app:tint="@color/setup_orange"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                            <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/setup_orange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BATTERY OPTIMIZATION"/>
+                            <TextView android:textSize="13sp" android:textColor="@color/warning_card_text_dim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Prevent Android from stopping your server."/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.button.MaterialButton android:textSize="16sp" android:textStyle="bold" android:textColor="@color/warning_sheet_background" android:id="@+id/setupContinueButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="24dp" android:text="Let&apos;s Go" app:backgroundTint="@color/setup_accent" app:cornerRadius="12dp" app:icon="@drawable/ic_arrow_forward" app:iconGravity="4" app:iconTint="@color/warning_sheet_background"/>
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="8dp">
+                    <View android:background="@drawable/setup_dot_active" android:layout_width="8dp" android:layout_height="8dp"/>
+                    <View android:background="@drawable/setup_dot_inactive" android:layout_width="8dp" android:layout_height="8dp" android:layout_marginStart="8dp"/>
+                    <View android:background="@drawable/setup_dot_inactive" android:layout_width="8dp" android:layout_height="8dp" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="72dp" android:layout_height="72dp" android:layout_marginTop="8dp">
+                    <View android:background="@drawable/setup_icon_background_blue" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <ImageView android:layout_gravity="center" android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_notifications" app:tint="@color/warning_sheet_background"/>
+                </FrameLayout>
+                <TextView android:textSize="26sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Allow Notifications" android:fontFamily="@font/space_grotesk_regular"/>
+                <TextView android:textSize="15sp" android:textColor="@color/warning_text_secondary" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="ARM-MC uses a notification to show that your server is running. This lets you close the app while your server continues in the background." android:lineSpacingExtra="4dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:cardBackgroundColor="@color/warning_card_background" app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeWidth="0dp">
+                    <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_info" android:layout_marginEnd="12dp" app:tint="@color/setup_blue"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/warning_card_text_dim" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Without this permission, you won&apos;t see a notification when your server is running and Android may stop it when you leave the app." android:layout_weight="1" android:lineSpacingExtra="2dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.button.MaterialButton android:textSize="16sp" android:textStyle="bold" android:textColor="@color/warning_sheet_background" android:id="@+id/setupNotificationButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="24dp" android:text="Allow Notifications" app:backgroundTint="@color/setup_blue" app:cornerRadius="12dp" app:icon="@drawable/ic_notifications" app:iconGravity="2" app:iconTint="@color/warning_sheet_background"/>
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="8dp">
+                    <View android:background="@drawable/setup_dot_inactive" android:layout_width="8dp" android:layout_height="8dp"/>
+                    <View android:background="@drawable/setup_dot_active" android:layout_width="8dp" android:layout_height="8dp" android:layout_marginStart="8dp"/>
+                    <View android:background="@drawable/setup_dot_inactive" android:layout_width="8dp" android:layout_height="8dp" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="72dp" android:layout_height="72dp" android:layout_marginTop="8dp">
+                    <View android:background="@drawable/setup_icon_background_orange" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <ImageView android:layout_gravity="center" android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_battery_alert" app:tint="@color/warning_sheet_background"/>
+                </FrameLayout>
+                <TextView android:textSize="26sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Disable Battery Optimization" android:fontFamily="@font/space_grotesk_regular"/>
+                <TextView android:textSize="15sp" android:textColor="@color/warning_text_secondary" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Android automatically optimizes battery usage by closing background apps. Your Minecraft server needs to stay running, so we need to exempt ARM-MC from this." android:lineSpacingExtra="4dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:cardBackgroundColor="@color/warning_card_background" app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeWidth="0dp">
+                    <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_info" android:layout_marginEnd="12dp" app:tint="@color/setup_orange"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/warning_card_text_dim" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Without this, Android may kill your server after a while to save battery. This is the most common reason for unexpected server shutdowns." android:layout_weight="1" android:lineSpacingExtra="2dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.button.MaterialButton android:textSize="16sp" android:textStyle="bold" android:textColor="@color/warning_sheet_background" android:id="@+id/setupBatteryButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="24dp" android:text="Disable Battery Opt." app:backgroundTint="@color/setup_orange" app:cornerRadius="12dp" app:icon="@drawable/ic_battery_alert" app:iconGravity="2" app:iconTint="@color/warning_sheet_background"/>
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="8dp">
+                    <View android:background="@drawable/setup_dot_inactive" android:layout_width="8dp" android:layout_height="8dp"/>
+                    <View android:background="@drawable/setup_dot_inactive" android:layout_width="8dp" android:layout_height="8dp" android:layout_marginStart="8dp"/>
+                    <View android:background="@drawable/setup_dot_active" android:layout_width="8dp" android:layout_height="8dp" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ViewFlipper>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
